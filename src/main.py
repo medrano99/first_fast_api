@@ -1,15 +1,15 @@
 from fastapi import FastAPI
 from models import Item
 
-# Crear una instancia de FastAPI
+# Create an instance of FastAPI
 app = FastAPI()
 
-# Definir una ruta para la raíz del sitio
+# Define a path for the site root
 @app.get("/")
 def read_root():
     return {"message": "Hello, World!"}
 
-# Ruta para recibir y imprimir un JSON mediante POST
+# Path to receive and print a JSON via POST
 @app.post("/items/")
 def process_json(item: Item):
     print("JSON recibido:")
