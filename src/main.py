@@ -11,7 +11,6 @@ def read_root():
 
 # Path to receive and print a JSON via POST
 @app.post("/items/")
-def process_json(item: Item):
-    print("JSON recibido:")
+def process_json(item: Item):    
     print(item.json())
-    return {"message": "JSON recibido y procesado"}
+    return {"message": "JSON received and processed"}
